@@ -1,26 +1,61 @@
+
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <Cabecalho />
+      <Candidato />
 </template>
 
+
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import Cabecalho from './components/Cabecalho.vue';
+import Candidato from './components/Candidato.vue';
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+
+      name: "App",
+      components: {
+
+            Cabecalho,
+            Candidato
+      }
 }
+
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+      background-color: #494949;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+
+}
+
+.candidato {
+
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 20px;
+      border-radius: 20px;
+      border: solid 1px white;
+      background-color: rgb(75, 105, 73);
+      box-shadow: -4px 15px 49px 19px rgb(74, 126, 71);
+}
+
+.info {
+
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+      background-color: darkslategrey;
+      padding: 20px;
+      border-radius: 20px;
+      border: solid 1px white;
+      justify-content: center;
+      box-shadow: -4px 15px 49px 19px rgb(115, 175, 111);
 }
 </style>
