@@ -1,16 +1,11 @@
 <template>
     <div class="info">
-        <p v-if="esta_trabalhando">não estou trabalhando no momento.</p>
+        <p v-if="esta_trabalhando"> estou trabalhando no momento.</p>
         <p v-else>estou em busca de novas oportunidades.</p>
 
         <h3>Linguagens/talentos</h3>
         <ul>
-            <li>Html</li>
-            <li>Css</li>
-            <li>Javascript</li>
-            <li>React.js</li>
-            <li>Vue.js</li>
-            <li>Sei passar Café</li>
+            <li v-bind:key="index" v-for="(tecnologias, index) in frontend_technologies">{{ tecnologias }}</li>
         </ul>
         <div>
             <button @click="ShowEmail">{{ textoBotao }}</button>
@@ -33,11 +28,22 @@ export default {
     data() {
 
         return {
-            esta_trabalhando: false,
+
             mostrar_email: false,
             url_portifolio: "https://github.com/euRenatoReis",
-            textoBotao: "Mostrar Email"
+            textoBotao: "Mostrar Email",
+            frontend_technologies: [
+                'Html',
+                'Css',
+                'Javascript',
+                'React.js',
+                'Vue.js',
+                'Sei passar Café'
+            ]
         }
+    },props:{
+        email: String,
+        esta_trabalhando: Boolean
     },
     methods: {
 
@@ -66,15 +72,14 @@ button {
     align-items: center;
     border: none;
     box-shadow: -4px 15px 49px 19px rgb(124, 201, 118);
-    background-color: rgba(153,214,149,1);
+    background-color: rgba(153, 214, 149, 1);
     color: rgb(2, 78, 12);
 }
 
-button:hover{
+button:hover {
 
-      box-shadow: -4px 15px 49px 19px rgba(153,214,149,1);
-      color: white;
+    box-shadow: -4px 15px 49px 19px rgba(153, 214, 149, 1);
+    color: white;
 }
-
 </style>
  

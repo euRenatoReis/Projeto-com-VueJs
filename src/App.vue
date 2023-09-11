@@ -2,6 +2,8 @@
 <template>
       <Cabecalho />
       <Candidato />
+      <Formulario />
+      <Reutilizacao/>
 </template>
 
 
@@ -9,6 +11,8 @@
 
 import Cabecalho from './components/Cabecalho.vue';
 import Candidato from './components/Candidato.vue';
+import Formulario from './components/Formulario.vue';
+import Reutilizacao from './components/Reutilizacao.vue';
 
 export default {
 
@@ -16,7 +20,9 @@ export default {
       components: {
 
             Cabecalho,
-            Candidato
+            Candidato,
+            Formulario,
+            Reutilizacao
       }
 }
 
